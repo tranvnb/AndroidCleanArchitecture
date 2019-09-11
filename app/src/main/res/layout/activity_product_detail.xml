@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_product_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundDevices"
+    tools:context="lf.com.oniondemo.UI.Activities.ProductDetailActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/detailToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/AppTheme.NoActionBar" >
+        <TextView
+            android:textSize="@dimen/title_big"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_product_detail"/>
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.CardView
+        android:padding="10dp"
+        android:id="@+id/productDetail"
+        android:layout_below="@+id/detailToolbar"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:padding="10dp"
+                android:id="@+id/pdicon"
+                style="@style/IconStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/shoes1"/>
+            <TextView
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:id="@+id/txtpdProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="txtProductName"
+                android:layout_toRightOf="@+id/pdicon"
+                android:textSize="@dimen/title_size"/>
+            <TextView
+                android:paddingLeft="10dp"
+                android:id="@+id/txtpdBrandName"
+                android:layout_toRightOf="@+id/pdicon"
+                android:layout_below="@+id/txtpdProductName"
+                android:layout_width="wrap_content"
+                android:text="Brand name"
+                android:textSize="@dimen/body_size"
+                android:layout_height="wrap_content" />
+            <RatingBar
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/pdRatingBar"
+                style="?attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtpdBrandName"
+                android:layout_toRightOf="@id/pdicon"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.5" />
+            <TextView
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingTop="10dp"
+                android:id="@+id/txtpdProductDesTitle"
+                android:layout_below="@+id/pdicon"
+                android:text="@string/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:id="@+id/txtpdProductDes"
+                android:layout_below="@+id/txtpdProductDesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <ProgressBar
+        android:id="@+id/progressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+    <android.support.v7.widget.RecyclerView
+        android:paddingTop="10dp"
+        android:layout_below="@+id/productDetail"
+        android:id="@+id/reviewList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</RelativeLayout>

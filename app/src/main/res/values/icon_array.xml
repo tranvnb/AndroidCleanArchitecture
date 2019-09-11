@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="random_imgs">
+        <item>@drawable/pant1</item>
+        <item>@drawable/pant2</item>
+        <item>@drawable/pant3</item>
+        <item>@drawable/shirt1</item>
+        <item>@drawable/shoes1</item>
+        <item>@drawable/shoes2</item>
+        <item>@drawable/shoes3</item>
+        <item>@drawable/shoes4</item>
+        <item>@drawable/shoes5</item>
+    </integer-array>
+</resources>
