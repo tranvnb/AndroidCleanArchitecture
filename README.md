@@ -1,1 +1,1 @@
-# OnionDemo
+# Clean Architecture on Android
